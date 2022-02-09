@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+
+<h1>Markov Chain Transformation</h1>
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+    <div>
+        <label>File to transform</label>
+        <input type="file" name="file"/>
+    </div><br/>
+
+    <div>
+        <label>Order</label>
+        <input type="text" name="order">
+    </div><br/>
+
+    <div>
+        <label>Output File Path</label>
+        <input type="text" name="outputFilePath">
+    </div><br/>
+
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

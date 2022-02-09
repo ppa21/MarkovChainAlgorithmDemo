@@ -4,9 +4,8 @@ import com.assignment.markovchaindemo.models.InputData;
 import com.assignment.markovchaindemo.services.FileContentTransformationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class FileContentTransformationController {
@@ -27,16 +26,9 @@ public class FileContentTransformationController {
             has @Entity annotation with its id being annotated with @Id
      */
     @PostMapping("/upload")
-    public String index(@RequestParam MultipartFile file,
-                        @RequestParam int order,
-                        @RequestParam String outputFilePath) {
-
-
-        // Todo: remove InputData???
-        InputData data = new InputData(file, order, outputFilePath);
-
-        String fileContent = fileContentTransformationService.readFileContent(file);
-        fileContentTransformationService.writeToFile(fileContent, outputFilePath);
+    public String index(@ModelAttribute InputData data) {
+        String fileContent = fileContentTransformationService.readFileContent(data.getFile());
+        fileContentTransformationService.writeToFile(fileContent, data.getOutputFilePath());
 
         return "success";
     }

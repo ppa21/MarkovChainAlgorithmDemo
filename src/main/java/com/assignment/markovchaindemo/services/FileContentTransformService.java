@@ -11,7 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Service
-public class FileContentTransformationService {
+public class FileContentTransformService {
     public String readFileContent(MultipartFile file) {
         String fileContent = null;
         try {

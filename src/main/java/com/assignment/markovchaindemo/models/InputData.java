@@ -11,5 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 public class InputData {
     private final MultipartFile file;
     private final int order;
+    private final int textLength;
     private final String outputFilePath;
 }

@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" href="upload.css">
+</head>
 <body>
 
-<h1>Markov Chain Transformation</h1>
+<form method="POST" action="/upload" enctype="multipart/form-data" class="form-style">
+    <h1>Markov Chain Transformation</h1><br/>
 
-<form method="POST" action="/upload" enctype="multipart/form-data">
-    <div>
-        <label>File to transform</label>
-        <input type="file" name="file"/>
-    </div><br/>
+    <ul>
+        <li>
+            <label>File to transform</label><br/>
+            <input type="file" name="file"/><br/>
+            <span>Upload your file</span>
+        </li><br/>
 
-    <div>
-        <label>Order</label>
-        <input type="text" name="order">
-    </div><br/>
+        <li>
+            <label>Order</label>
+            <input type="text" name="order">
+            <span>Explain order</span>
+        </li><br/>
 
-    <div>
-        <label>Text Length</label>
-        <input type="text" name="textLength">
-    </div><br/>
+        <li>
+            <label>Text Length</label>
+            <input type="text" name="textLength">
+            <span>here1</span>
+        </li><br/>
 
-    <div>
-        <label>Output File Path</label>
-        <input type="text" name="outputFilePath">
-    </div><br/>
+        <li>
+            <label>Output File Path</label>
+            <input type="text" name="outputFilePath">
+            <span>Where on your computer to save the output file</span>
+        </li>
 
-    <input type="submit" value="Submit" />
+        <li>
+            <input type="submit" value="Submit" />
+        </li>
+    </ul>
 </form>
 
 </body>

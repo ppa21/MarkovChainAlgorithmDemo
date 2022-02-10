@@ -21,9 +21,8 @@ public class FileContentTransformController {
     }
 
     @PostMapping("/upload")
-    public String index(@ModelAttribute InputData data) {
-        String fileContent = fileContentTransformService.readFileContent(data.getFile());
-        fileContentTransformService.writeToFile(fileContent, data.getOutputFilePath());
+    public String transformText(@ModelAttribute InputData data) {
+        fileContentTransformService.applyMarkov(data);
 
         return "success";
     }

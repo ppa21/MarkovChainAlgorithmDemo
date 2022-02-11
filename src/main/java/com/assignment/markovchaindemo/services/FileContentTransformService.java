@@ -20,6 +20,15 @@ public class FileContentTransformService {
         this.fileContentIO = fileContentIO;
     }
 
+    /** Sets up ngrams by reading file content from file such that:
+     *  key = string of size order
+     *  value = list of probable strings that are most likely to follow the key value
+     *  Ex: key   = "the"
+     *      value = {"y", "re", "ir"...}
+     *
+     * @param file file selected by the user whose content is to be read and transformed
+     * @param order defines the size of the string which is the key of map, ngrams
+     */
     private void setup(MultipartFile file, int order) {
         fileContent = fileContentIO.readFileContent(file);
         String[] words = fileContent.trim().split(" ");
@@ -47,6 +56,11 @@ public class FileContentTransformService {
         }
     }
 
+    /**
+     * Applies markov chain algorithm to transform text which is then written to the output file
+     *
+     * @param data data that's filled by the user on the frontend
+     */
     public void applyMarkov(InputData data) {
         setup(data.getFile(), data.getOrder());
 

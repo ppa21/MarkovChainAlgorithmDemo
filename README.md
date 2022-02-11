@@ -20,7 +20,8 @@
 ## References
 * https://www.youtube.com/watch?v=uvYTGEZQTEs
 * https://www.youtube.com/watch?v=jtHBfLtMq4U  
-* https://www.youtube.com/watch?v=eGFJ8vugIWA&t=4s 
+* https://www.youtube.com/watch?v=eGFJ8vugIWA&t
 * https://www.youtube.com/watch?v=9r8CmofnbAQ
 * https://rosettacode.org/wiki/Markov_chain_text_generator
-* https://www.youtube.com/watch?v=Gs2xtNzogSY&t=1395s
+* https://www.youtube.com/watch?v=Gs2xtNzogSY&t
+* https://www.sanwebe.com/2014/08/css-html-forms-designs
